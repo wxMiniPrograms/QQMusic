@@ -1,0 +1,33 @@
+
+<view class='content'>
+  <view>
+    <view class='item'>
+      <view class='main'>
+        <view class='left'>
+          <image src='{{img[0].url}}'></image>
+        </view>
+        <view class='right'>
+          <view class='info'>
+            <view class='title'>{{img[0].title}}</view>
+            <view class='order'>
+              1
+              <view class='songname'>个地方官大</view>
+              -Sam
+            </view>
+            <view class='order'>
+              1
+              <view class='songname'>个地方官大</view>
+              -Sam
+            </view>
+            <view class='order'>
+              1
+              <view class='songname'>个地方官大</view>
+              -Sam
+            </view>
+          </view>
+          <view class='sign'></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
