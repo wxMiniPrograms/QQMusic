@@ -1,1 +1,134 @@
 /* pages/search/search.wxss */
+/*showToast  */
+page{
+  font-size: 16px;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.window{
+  width: 40%;
+  padding: 10px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 20rpx;
+}
+
+.text{
+  color: #fff;
+  text-align: center;
+}
+
+
+
+.container{
+  height: auto;
+  background: #f4f4f4;
+  padding: 20rpx;
+  position: relative;
+}
+
+.search input{
+  background: #fff;
+  padding: 10rpx 10rpx 10rpx 70rpx;
+  width: 710rpx;
+  height: 80rpx;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.search image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 35rpx;
+  left: 30rpx;
+}
+
+.resetBtn{
+  padding: 0;
+  position: absolute;
+  width: 22px;
+  line-height: 20px;
+  height: 22px;
+  top: 35rpx;
+  right: 35rpx;
+  z-index: 999;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .4);
+  color: white;
+}
+
+
+
+.content-item{
+  display: -webkit-box;
+  border-bottom: 1px solid #f4f4f4;
+}
+.item-left{
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center; 
+}
+.item-left image{
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+
+.item-right{
+  font-size: 16px;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center; 
+}
+.item-right .title,.item-right .singer{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.singer{
+  color: #999;
+}
+
+
+/*历史  */
+.history-item{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  box-sizing: border-box;
+}
+.history-item image{
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-right: 10px;
+}
+.history-item .title{
+  -webkit-box-flex: 1;
+  -webkit-box-align: center;
+}
+.delete{
+  width: 20px;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  color: #ccc;
+}
+
+.clearHistory{
+  color: rgb(49,194,124);
+  text-align: center;
+}

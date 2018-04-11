@@ -1,2 +1,45 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class='box' wx:if='{{showToast}}'>
+  <view class='window'>
+    <view class='text'>{{toastText}}</view>
+  </view>
+</view>
+
+<view class='container'>
+  <view class='search'>
+    <form>
+      <input bindinput='input' bindfocus='focus' bindconfirm='confirm' placeholder='搜索歌曲、歌单、专辑' placeholder-class='placeholder' confirm-type='search'></input>
+      <image src='../../img/sort.png'></image>
+      <button bindtap='reset' class='resetBtn' form-type='reset' hidden='{{!resetBtn}}'>x</button>
+    </form>
+  </view>
+</view>
+
+<view class='music-body'>
+  <view class='content'>
+    <view class='content-item' wx:for='{{data}}' wx:key='u'>
+      <view class='item-left'>
+        <image src='{{item.albumpic_small}}'></image>
+      </view>
+      <view class='item-right'>
+        <view class='title'>{{item.singername}}</view>
+        <view class='singer'>{{item.songname}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--历史 -->
+<view hidden='{{!flag}}'>
+  <view>
+    <block wx:for='{{history}}' wx:key='a'>
+      <view class='history-item'>
+        <image src='../../img/love.png'></image>
+        <view class='title'>{{item}}</view>
+        <view id='{{index}}' bindtap='delete' class='delete'>x</view>
+      </view>
+    </block>
+  </view>
+  <view bindtap='clear' class='clearHistory' hidden='{{!history[0]}}'>
+    清除历史记录
+  </view>
+</view>
